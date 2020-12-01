@@ -50,6 +50,21 @@ class AdditionTestSuite(unittest.TestCase):
         self.assertEqual(result, -11)
         self.assertNotEqual(result, 11)
 
+    def test_multiply_two_integers(self):
+        """ Test that multiplying two positive numbers returns the correct number """
+        result = self.calculator.multiply(5, 6)
+        self.assertEqual(result, 30)
+
+    def test_multiply_negative_integers(self):
+        """ Test that multiplying two negative numbers returns the correct number """
+        result = self.calculator.multiply(-5, -6)
+        self.assertEqual(result, 30)
+
+    def test_multiply_integer_string(self):
+        """ Test that multiplying a negative number and a string returns an error """
+        result = self.calculator.multiply(-5, "-6")
+        self.assertEqual(result, "ERROR")
+
 # Execute all the tests when the file is executed
 if __name__ == "__main__":
     unittest.main()

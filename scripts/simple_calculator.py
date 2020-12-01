@@ -4,3 +4,8 @@ class SimpleCalculator:
             return a + b
         else:
             return "ERROR"
+    def multiply(self, a, b):
+        if isinstance(a, int) and isinstance(b, int):
+            return a * b
+        else:
+            return "ERROR"
